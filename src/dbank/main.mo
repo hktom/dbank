@@ -6,5 +6,21 @@ actor DBank {
 
   let id = 2333933883993;
 
-  Debug.print(debug_show(currentValue))
+  public func topUp(amount : Nat) {
+    currentValue += amount;
+    Debug.print(debug_show (currentValue));
+  };
+
+  public func widraw(amount : Nat) {
+    let tempValue : Int = currentValue - amount;
+    if (tempValue >= 0) {
+      currentValue -= amount;
+      Debug.print(debug_show (currentValue));
+    } else {
+      Debug.print(debug_show (currentValue));
+    };
+  };
+
+  // topUp();
+
 };
