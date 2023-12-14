@@ -21,6 +21,8 @@ actor DBank {
     };
   };
 
-  // topUp();
+  public query func checkBalance() : async Nat {
+    return currentValue;
+  };
 
 };
